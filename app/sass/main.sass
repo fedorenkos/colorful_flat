@@ -1,0 +1,354 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+::selection
+	background-color: $accent
+	color: #fff
+
+a
+	text-decoration: none
+	color: $menulink
+
+	&:hover
+		color: $accent
+
+h1, h2
+	font-family: $default-font
+	text-transform: uppercase
+	font-weight: bold
+
+
+.container
+	min-width: 320px
+	max-width: 1170px
+	margin: auto
+
+.main-header
+	width: 100%
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding: 30px 0
+	flex-wrap: wrap
+
+.hamburger
+		display: none
+	
+.headhesive
+	background: rgba(0, 0, 0, .75);
+
+	width: 100%
+	padding: 0 70px
+	z-index: 1
+	position: fixed
+	transform: translateY(-100%)
+	transition: 0.5s
+
+.headhesive--stick
+	transform: translateY(0)	
+
+
+
+.logo
+	width: 50%
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+
+
+
+.brand
+	font-size: 1.250em
+	color: $accent
+	white-space: nowrap
+	padding: 0
+
+nav ul
+	width: 40%
+	display: flex
+	justify-content: space-between
+	li
+		list-style-type: none
+		padding: 10px
+
+.dropdown
+	display: flex
+	flex-direction: column
+	border: 1px solid #aaa
+	width: 100px
+	position: absolute
+	display: none
+	z-index: 1
+	background-color: $p-color
+
+	li 
+		list-style-type: none
+		text-align: center
+		padding: 0
+
+::before
+		content: ''
+		display: block
+		width: 0
+		height: 0	
+		position: absolute 
+	    left: 30px
+	    top: -15px 
+	    border-left: 5px solid transparent 
+	    border-right: 5px solid transparent 
+	    border-bottom: 10px solid yellow		
+			
+.fa-caret-down
+	padding-left: 10px
+	padding-top: 7px	
+	color: $accent
+
+//hamburger
+
+	
+//end hamburger
+
+
+
+
+//SLIDER STYLES
+
+.slide
+	position: relative
+
+
+//popup
+.hidden
+	display: none
+
+form
+	margin: 200px auto
+	max-width: 320px
+	padding-left: 60px
+	background: #fff
+	input, button
+		margin: auto
+
+
+//dots
+.slick-dots li button
+	border: 2px solid $white
+	border-radius: 50%
+	-webkit-transition: border-color .3s
+	-o-transition: border-color .3s
+	transition: border-color .3s
+	
+
+.slick-dots li button:before	
+	content: ''
+	width: 20px
+	height: 20px
+	background: transparent
+	opacity: 1
+	border-radius: 50%
+	top: 50%
+	left: 50%
+	margin: -10px 0 0 -10px	
+	-webkit-transition: background .3s
+	-o-transition: background .3s
+	transition: background .3s
+
+.slick-dots li button.slick:hover button,
+.slick-dots li button.slick-active button
+	border-color: $white
+
+.slick-dots li button:hover:before,
+.slick-dots li button.slick-active button:before
+	background: $white
+//end dots
+
+.sl_txt
+	display: grid
+	position: absolute
+	grid-tamplate-column: 1fr 1fr
+	top: 10%
+	width: 8%
+	
+.sl_h3
+	color: $white
+	line-height: 25px
+	font-size: 1.563em
+	font-weight: 700
+
+.sl_p
+	color: $white
+	line-height: 18px
+	font-size: 0.875em
+	padding-top: 15px
+
+.read_more
+	width: 120px
+	height: 40px
+	padding: 14px 17px
+	background: $white
+	border-radius: 3px
+	display: flex
+	justify-content: center
+	align-items: center	
+	margin-top: 15px
+	text-transform: uppercase
+	font-size: 0.813em
+	font-weight: bold
+	&:hover
+		background: $accent
+		color: $white
+
+//end SLIDER
+
+
+
+// 3 items
+
+.tree_items
+	display: grid
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-gap: 30px
+	padding-top: 40px
+	padding-bottom: 80px
+	position: relative
+	align-items: center
+	justify-content: space-around;
+	// display: flex
+	// align-items: flex-start
+
+ .right
+	padding-top: 15px
+div .left
+	
+
+div .right
+	padding-top: 15px
+
+.items_h2
+	font-family: $default-font
+	text-align: center
+
+.items_p
+	font-family: $text-font
+	font-size: 0.875em	
+	color: $p-color
+	text-align: center
+	padding: 0 5px
+
+.img_items
+	margin: auto
+
+.items_h2left
+	padding-top: 30px
+
+.items_h2right
+	padding-top: 25px
+
+
+//RECENT TEMPLATES
+
+.recent_bg
+	background: $third-bg
+
+.recent_temp
+	padding-top: 60px
+
+.templates
+	width: 100%
+	height: auto
+
+.temp_h2
+	text-align: center	
+	color: $white
+	line-height: 25px
+	font-size: 1.563em
+
+.temp_p
+	font-family: $text-font
+	font-size: 0.875em	
+	color: $p-color
+	text-align: center
+	padding: 20px 5px 50px 5px
+
+.tabs
+	display: flex
+	justify-content: center
+	text-align: center
+	span
+		color: $white
+		padding: 13px 16px
+		text-transform: uppercase
+		&:hover
+			padding: 13px 16px
+			background: #fff
+			color: $accent
+			cursor: pointer
+
+
+//sliding panels STYLES
+.slidingTab
+	width: 100%
+	height: auto
+	padding-bottom: 80px
+
+.tab_content
+	display: grid
+	grid-gap: 50px
+	grid-template-columns: auto auto auto
+	padding: 50px 10px
+
+
+@import "media" // Всегда в конце
